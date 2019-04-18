@@ -1,0 +1,23 @@
+PODS:
+  - Erik (4.2.0):
+    - Erik/Core (= 4.2.0)
+    - Kanna
+  - Erik/Core (4.2.0):
+    - Kanna
+  - Kanna (5.0.0)
+
+DEPENDENCIES:
+  - Erik
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Erik
+    - Kanna
+
+SPEC CHECKSUMS:
+  Erik: 6d235ccca881877bec9a28b833dfbb86dca91165
+  Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
+
+PODFILE CHECKSUM: 6cf9cce7c0f16b9eb03ffb00bba46f4d7c8ae693
+
+COCOAPODS: 1.6.1

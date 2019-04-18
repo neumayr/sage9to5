@@ -13,6 +13,7 @@
 		AF0A073C226910CE0080316E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073A226910CE0080316E /* Main.storyboard */; };
 		AF0A073E226910CE0080316E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073D226910CE0080316E /* Assets.xcassets */; };
 		AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073F226910CE0080316E /* LaunchScreen.storyboard */; };
+		AFD2C87C226919F600DD2E3B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C87B226919F600DD2E3B /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AF0A0742226910CE0080316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD2C877226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AFD2C878226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AFD2C87B226919F600DD2E3B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = sage9to5/Settings.bundle; sourceTree = "<group>"; };
 		FF898F8D8FDC5EF9F161A289 /* Pods-sage9to5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5.debug.xcconfig"; path = "Target Support Files/Pods-sage9to5/Pods-sage9to5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,7 @@
 		AF0A072A226910CE0080316E = {
 			isa = PBXGroup;
 			children = (
+				AFD2C87B226919F600DD2E3B /* Settings.bundle */,
 				AF0A0735226910CE0080316E /* sage9to5 */,
 				AF0A0734226910CE0080316E /* Products */,
 				ECC6F1E122E9AF96F2CDE8EA /* Pods */,
@@ -153,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD2C87C226919F600DD2E3B /* Settings.bundle in Resources */,
 				AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */,
 				AF0A073E226910CE0080316E /* Assets.xcassets in Resources */,
 				AF0A073C226910CE0080316E /* Main.storyboard in Resources */,

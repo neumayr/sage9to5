@@ -107,6 +107,7 @@
 				AF0A0730226910CE0080316E /* Frameworks */,
 				AF0A0731226910CE0080316E /* Resources */,
 				641EF5D9232461775FB32C5D /* [CP] Embed Pods Frameworks */,
+				AFD2C880226932A800DD2E3B /* Run Script - SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -211,6 +212,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sage9to5/Pods-sage9to5-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AFD2C880226932A800DD2E3B /* Run Script - SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

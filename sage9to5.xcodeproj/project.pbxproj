@@ -15,8 +15,19 @@
 		AF0A073C226910CE0080316E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073A226910CE0080316E /* Main.storyboard */; };
 		AF0A073E226910CE0080316E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073D226910CE0080316E /* Assets.xcassets */; };
 		AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073F226910CE0080316E /* LaunchScreen.storyboard */; };
+		AF277B4F2269E6190019804C /* Sage9to5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF277B4E2269E6190019804C /* Sage9to5Tests.swift */; };
 		AFD2C87C226919F600DD2E3B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C87B226919F600DD2E3B /* Settings.bundle */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF277B512269E6190019804C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF0A072B226910CE0080316E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF0A0732226910CE0080316E;
+			remoteInfo = sage9to5;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		31390EA162A25A906B2006EC /* Pods_sage9to5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sage9to5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +39,9 @@
 		AF0A073D226910CE0080316E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0A0740226910CE0080316E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0A0742226910CE0080316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF277B4C2269E6190019804C /* sage9to5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sage9to5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF277B4E2269E6190019804C /* Sage9to5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sage9to5Tests.swift; sourceTree = "<group>"; };
+		AF277B502269E6190019804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFD2C877226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AFD2C878226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AFD2C87B226919F600DD2E3B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = sage9to5/Settings.bundle; sourceTree = "<group>"; };
@@ -42,6 +56,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				99E19A61BE8CD873B691F937 /* Pods_sage9to5.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF277B492269E6190019804C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			children = (
 				AFD2C87B226919F600DD2E3B /* Settings.bundle */,
 				AF0A0735226910CE0080316E /* sage9to5 */,
+				AF277B4D2269E6190019804C /* sage9to5Tests */,
 				AF0A0734226910CE0080316E /* Products */,
 				ECC6F1E122E9AF96F2CDE8EA /* Pods */,
 				277019A691FA0E0C3DD3E77F /* Frameworks */,
@@ -73,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0A0733226910CE0080316E /* sage9to5.app */,
+				AF277B4C2269E6190019804C /* sage9to5Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +111,15 @@
 				AF0A0742226910CE0080316E /* Info.plist */,
 			);
 			path = sage9to5;
+			sourceTree = "<group>";
+		};
+		AF277B4D2269E6190019804C /* sage9to5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF277B4E2269E6190019804C /* Sage9to5Tests.swift */,
+				AF277B502269E6190019804C /* Info.plist */,
+			);
+			path = sage9to5Tests;
 			sourceTree = "<group>";
 		};
 		ECC6F1E122E9AF96F2CDE8EA /* Pods */ = {
@@ -125,6 +157,24 @@
 			productReference = AF0A0733226910CE0080316E /* sage9to5.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF277B4B2269E6190019804C /* sage9to5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF277B532269E6190019804C /* Build configuration list for PBXNativeTarget "sage9to5Tests" */;
+			buildPhases = (
+				AF277B482269E6190019804C /* Sources */,
+				AF277B492269E6190019804C /* Frameworks */,
+				AF277B4A2269E6190019804C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF277B522269E6190019804C /* PBXTargetDependency */,
+			);
+			name = sage9to5Tests;
+			productName = sage9to5Tests;
+			productReference = AF277B4C2269E6190019804C /* sage9to5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -137,6 +187,10 @@
 				TargetAttributes = {
 					AF0A0732226910CE0080316E = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					AF277B4B2269E6190019804C = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = AF0A0732226910CE0080316E;
 					};
 				};
 			};
@@ -155,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				AF0A0732226910CE0080316E /* sage9to5 */,
+				AF277B4B2269E6190019804C /* sage9to5Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +225,13 @@
 				AF0A073C226910CE0080316E /* Main.storyboard in Resources */,
 				8987C7DF744E3DFEF0A5EF0F /* Pods-sage9to5-metadata.plist in Resources */,
 				78C942803877F7F49A716DCF /* Pods-sage9to5-settings-metadata.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF277B4A2269E6190019804C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +332,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF277B482269E6190019804C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF277B4F2269E6190019804C /* Sage9to5Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF277B522269E6190019804C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF0A0732226910CE0080316E /* sage9to5 */;
+			targetProxy = AF277B512269E6190019804C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF0A073A226910CE0080316E /* Main.storyboard */ = {
@@ -450,6 +528,46 @@
 			};
 			name = Release;
 		};
+		AF277B542269E6190019804C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V54299RUD;
+				INFOPLIST_FILE = sage9to5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.solutions.sage9to5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sage9to5.app/sage9to5";
+			};
+			name = Debug;
+		};
+		AF277B552269E6190019804C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V54299RUD;
+				INFOPLIST_FILE = sage9to5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.solutions.sage9to5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sage9to5.app/sage9to5";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +585,15 @@
 			buildConfigurations = (
 				AF0A0746226910CE0080316E /* Debug */,
 				AF0A0747226910CE0080316E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF277B532269E6190019804C /* Build configuration list for PBXNativeTarget "sage9to5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF277B542269E6190019804C /* Debug */,
+				AF277B552269E6190019804C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

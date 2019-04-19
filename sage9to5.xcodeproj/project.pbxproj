@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BDABD98BF0F27DC50D37286 /* Pods_sage9to5_Tests_sage9to5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABC5B4B9E96C070761494F2 /* Pods_sage9to5_Tests_sage9to5Tests.framework */; };
+		398C144FBD5ACABE8D9322CF /* Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = E870761D1D5742D9A9762181 /* Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist */; };
+		576BF08883BB6BD9F1B0DA0C /* Pods-sage9to5-Tests-sage9to5Tests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC3063C8E4E06CF77248074B /* Pods-sage9to5-Tests-sage9to5Tests-metadata.plist */; };
 		78C942803877F7F49A716DCF /* Pods-sage9to5-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */; };
 		8987C7DF744E3DFEF0A5EF0F /* Pods-sage9to5-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */; };
 		99E19A61BE8CD873B691F937 /* Pods_sage9to5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31390EA162A25A906B2006EC /* Pods_sage9to5.framework */; };
+		A65113AC2CCDCF6387F4F119 /* Pods_sage9to5_sage9to5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D17743688E6BAF9E1AE85B1 /* Pods_sage9to5_sage9to5Tests.framework */; };
 		AF0A0737226910CE0080316E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0736226910CE0080316E /* AppDelegate.swift */; };
 		AF0A0739226910CE0080316E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0738226910CE0080316E /* ViewController.swift */; };
 		AF0A073C226910CE0080316E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073A226910CE0080316E /* Main.storyboard */; };
 		AF0A073E226910CE0080316E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073D226910CE0080316E /* Assets.xcassets */; };
 		AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073F226910CE0080316E /* LaunchScreen.storyboard */; };
 		AF277B4F2269E6190019804C /* Sage9to5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF277B4E2269E6190019804C /* Sage9to5Tests.swift */; };
+		AF277B572269E9C10019804C /* sage9to5Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF277B562269E9C10019804C /* sage9to5Spec.swift */; };
 		AFD2C87C226919F600DD2E3B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C87B226919F600DD2E3B /* Settings.bundle */; };
+		C2DC0C1064B9F283BB825982 /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CA00F1B3D8F858D0C1F397F /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist */; };
+		E24FC11972D9CBEEF7407121 /* Pods-sage9to5-sage9to5Tests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98BEFC78E4201D774A1604E9 /* Pods-sage9to5-sage9to5Tests-metadata.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CA00F1B3D8F858D0C1F397F /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-sage9to5-sage9to5Tests-settings-metadata.plist"; path = "../sage9to5/Settings.bundle/Pods-sage9to5-sage9to5Tests-settings-metadata.plist"; sourceTree = "<group>"; };
 		31390EA162A25A906B2006EC /* Pods_sage9to5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sage9to5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABC5B4B9E96C070761494F2 /* Pods_sage9to5_Tests_sage9to5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sage9to5_Tests_sage9to5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D17743688E6BAF9E1AE85B1 /* Pods_sage9to5_sage9to5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sage9to5_sage9to5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8DF72A2F0C4C4229A86AF5 /* Pods-sage9to5-sage9to5Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5-sage9to5Tests.debug.xcconfig"; path = "Target Support Files/Pods-sage9to5-sage9to5Tests/Pods-sage9to5-sage9to5Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		730396593A1C1A706D9FD16A /* Pods-sage9to5-Tests-sage9to5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5-Tests-sage9to5Tests.release.xcconfig"; path = "Target Support Files/Pods-sage9to5-Tests-sage9to5Tests/Pods-sage9to5-Tests-sage9to5Tests.release.xcconfig"; sourceTree = "<group>"; };
 		865880A652BCD9E83D1BAACC /* Pods-sage9to5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5.release.xcconfig"; path = "Target Support Files/Pods-sage9to5/Pods-sage9to5.release.xcconfig"; sourceTree = "<group>"; };
+		926C59366C2850B230A0D510 /* Pods-sage9to5-Tests-sage9to5Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5-Tests-sage9to5Tests.debug.xcconfig"; path = "Target Support Files/Pods-sage9to5-Tests-sage9to5Tests/Pods-sage9to5-Tests-sage9to5Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		98BEFC78E4201D774A1604E9 /* Pods-sage9to5-sage9to5Tests-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sage9to5-sage9to5Tests-metadata.plist"; sourceTree = "<group>"; };
 		AF0A0733226910CE0080316E /* sage9to5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sage9to5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0A0736226910CE0080316E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF0A0738226910CE0080316E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,11 +56,15 @@
 		AF277B4C2269E6190019804C /* sage9to5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sage9to5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF277B4E2269E6190019804C /* Sage9to5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sage9to5Tests.swift; sourceTree = "<group>"; };
 		AF277B502269E6190019804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF277B562269E9C10019804C /* sage9to5Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sage9to5Spec.swift; sourceTree = "<group>"; };
 		AFD2C877226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AFD2C878226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AFD2C87B226919F600DD2E3B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = sage9to5/Settings.bundle; sourceTree = "<group>"; };
 		BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-sage9to5-settings-metadata.plist"; path = "../sage9to5/Settings.bundle/Pods-sage9to5-settings-metadata.plist"; sourceTree = "<group>"; };
 		D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sage9to5-metadata.plist"; sourceTree = "<group>"; };
+		E870761D1D5742D9A9762181 /* Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist"; path = "../sage9to5/Settings.bundle/Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist"; sourceTree = "<group>"; };
+		ED6277D1F2E0D833C465B883 /* Pods-sage9to5-sage9to5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5-sage9to5Tests.release.xcconfig"; path = "Target Support Files/Pods-sage9to5-sage9to5Tests/Pods-sage9to5-sage9to5Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FC3063C8E4E06CF77248074B /* Pods-sage9to5-Tests-sage9to5Tests-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sage9to5-Tests-sage9to5Tests-metadata.plist"; sourceTree = "<group>"; };
 		FF898F8D8FDC5EF9F161A289 /* Pods-sage9to5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5.debug.xcconfig"; path = "Target Support Files/Pods-sage9to5/Pods-sage9to5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDABD98BF0F27DC50D37286 /* Pods_sage9to5_Tests_sage9to5Tests.framework in Frameworks */,
+				A65113AC2CCDCF6387F4F119 /* Pods_sage9to5_sage9to5Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				31390EA162A25A906B2006EC /* Pods_sage9to5.framework */,
+				3ABC5B4B9E96C070761494F2 /* Pods_sage9to5_Tests_sage9to5Tests.framework */,
+				3D17743688E6BAF9E1AE85B1 /* Pods_sage9to5_sage9to5Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +140,7 @@
 			children = (
 				AF277B4E2269E6190019804C /* Sage9to5Tests.swift */,
 				AF277B502269E6190019804C /* Info.plist */,
+				AF277B562269E9C10019804C /* sage9to5Spec.swift */,
 			);
 			path = sage9to5Tests;
 			sourceTree = "<group>";
@@ -129,6 +152,14 @@
 				865880A652BCD9E83D1BAACC /* Pods-sage9to5.release.xcconfig */,
 				D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */,
 				BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */,
+				926C59366C2850B230A0D510 /* Pods-sage9to5-Tests-sage9to5Tests.debug.xcconfig */,
+				730396593A1C1A706D9FD16A /* Pods-sage9to5-Tests-sage9to5Tests.release.xcconfig */,
+				FC3063C8E4E06CF77248074B /* Pods-sage9to5-Tests-sage9to5Tests-metadata.plist */,
+				E870761D1D5742D9A9762181 /* Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist */,
+				6F8DF72A2F0C4C4229A86AF5 /* Pods-sage9to5-sage9to5Tests.debug.xcconfig */,
+				ED6277D1F2E0D833C465B883 /* Pods-sage9to5-sage9to5Tests.release.xcconfig */,
+				98BEFC78E4201D774A1604E9 /* Pods-sage9to5-sage9to5Tests-metadata.plist */,
+				1CA00F1B3D8F858D0C1F397F /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -161,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF277B532269E6190019804C /* Build configuration list for PBXNativeTarget "sage9to5Tests" */;
 			buildPhases = (
+				581FE3AB2DC0F09E2704873A /* [CP] Check Pods Manifest.lock */,
 				AF277B482269E6190019804C /* Sources */,
 				AF277B492269E6190019804C /* Frameworks */,
 				AF277B4A2269E6190019804C /* Resources */,
+				DE0898F9F701D076C2F92DAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,12 +265,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576BF08883BB6BD9F1B0DA0C /* Pods-sage9to5-Tests-sage9to5Tests-metadata.plist in Resources */,
+				398C144FBD5ACABE8D9322CF /* Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist in Resources */,
+				E24FC11972D9CBEEF7407121 /* Pods-sage9to5-sage9to5Tests-metadata.plist in Resources */,
+				C2DC0C1064B9F283BB825982 /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		581FE3AB2DC0F09E2704873A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sage9to5-sage9to5Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A8DDE2F4F927D6D01598EE9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +379,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		DE0898F9F701D076C2F92DAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sage9to5-sage9to5Tests/Pods-sage9to5-sage9to5Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Erik/Erik.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Erik.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sage9to5-sage9to5Tests/Pods-sage9to5-sage9to5Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -337,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF277B4F2269E6190019804C /* Sage9to5Tests.swift in Sources */,
+				AF277B572269E9C10019804C /* sage9to5Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +618,7 @@
 		};
 		AF277B542269E6190019804C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8DF72A2F0C4C4229A86AF5 /* Pods-sage9to5-sage9to5Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +639,7 @@
 		};
 		AF277B552269E6190019804C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED6277D1F2E0D833C465B883 /* Pods-sage9to5-sage9to5Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

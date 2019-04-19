@@ -8,4 +8,9 @@ target 'sage9to5' do
   # Pods for sage9to5
   pod 'Erik'
   pod 'SwiftLint'
+
+  target "sage9to5Tests" do
+    pod 'Quick'
+    pod 'Nimble'
+  end
 end

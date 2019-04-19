@@ -50,7 +50,7 @@
 			<key>Title</key>
 			<string>About</string>
 			<key>FooterText</key>
-			<string>© 2019 Nerds Next Door – All rights reserved</string>
+			<string>© Nerds Next Door – All rights reserved</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -61,6 +61,14 @@
 			<string>Version</string>
 			<key>DefaultValue</key>
 			<string>0.0 (X)</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Acknowledgements</string>
+			<key>File</key>
+			<string>Pods-sage9to5-settings-metadata</string>
 		</dict>
 	</array>
 </dict>

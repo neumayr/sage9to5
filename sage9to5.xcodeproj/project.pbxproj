@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78C942803877F7F49A716DCF /* Pods-sage9to5-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */; };
+		8987C7DF744E3DFEF0A5EF0F /* Pods-sage9to5-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */; };
 		99E19A61BE8CD873B691F937 /* Pods_sage9to5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31390EA162A25A906B2006EC /* Pods_sage9to5.framework */; };
 		AF0A0737226910CE0080316E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0736226910CE0080316E /* AppDelegate.swift */; };
 		AF0A0739226910CE0080316E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0738226910CE0080316E /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 		AFD2C877226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		AFD2C878226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AFD2C87B226919F600DD2E3B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = sage9to5/Settings.bundle; sourceTree = "<group>"; };
+		BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-sage9to5-settings-metadata.plist"; path = "../sage9to5/Settings.bundle/Pods-sage9to5-settings-metadata.plist"; sourceTree = "<group>"; };
+		D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sage9to5-metadata.plist"; sourceTree = "<group>"; };
 		FF898F8D8FDC5EF9F161A289 /* Pods-sage9to5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sage9to5.debug.xcconfig"; path = "Target Support Files/Pods-sage9to5/Pods-sage9to5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +95,8 @@
 			children = (
 				FF898F8D8FDC5EF9F161A289 /* Pods-sage9to5.debug.xcconfig */,
 				865880A652BCD9E83D1BAACC /* Pods-sage9to5.release.xcconfig */,
+				D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */,
+				BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 				AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */,
 				AF0A073E226910CE0080316E /* Assets.xcassets in Resources */,
 				AF0A073C226910CE0080316E /* Main.storyboard in Resources */,
+				8987C7DF744E3DFEF0A5EF0F /* Pods-sage9to5-metadata.plist in Resources */,
+				78C942803877F7F49A716DCF /* Pods-sage9to5-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

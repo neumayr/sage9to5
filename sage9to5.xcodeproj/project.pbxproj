@@ -108,6 +108,7 @@
 				AF0A0731226910CE0080316E /* Resources */,
 				641EF5D9232461775FB32C5D /* [CP] Embed Pods Frameworks */,
 				AFD2C880226932A800DD2E3B /* Run Script - SwiftLint */,
+				AF9EEC0A2269CDC200371BAF /* Run Script - App Version to Settings.bundle */,
 			);
 			buildRules = (
 			);
@@ -212,6 +213,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sage9to5/Pods-sage9to5-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AF9EEC0A2269CDC200371BAF /* Run Script - App Version to Settings.bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - App Version to Settings.bundle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "version=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$PROJECT_DIR/$INFOPLIST_FILE\")\nbuild=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PROJECT_DIR/$INFOPLIST_FILE\")\n/usr/libexec/PlistBuddy -c \"Set PreferenceSpecifiers:5:DefaultValue $version ($build)\" \"$CODESIGNING_FOLDER_PATH/Settings.bundle/Root.plist\"\n";
 		};
 		AFD2C880226932A800DD2E3B /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;

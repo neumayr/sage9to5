@@ -10,51 +10,57 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
+			<string>Sage HR Portal</string>
+			<key>FooterText</key>
+			<string>Add the full Sage HR URL</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Name</string>
+			<string>URL</string>
 			<key>Key</key>
-			<string>name_preference</string>
+			<string>url_preference</string>
 			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<false/>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
+			<string>https://portal106427097.bpo-sage.de/mportal/</string>
 			<key>AutocorrectionType</key>
 			<string>No</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Intro</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Enabled</string>
 			<key>Key</key>
-			<string>enabled_preference</string>
+			<string>intro_preference</string>
+			<key>Title</key>
+			<string>Show Intro</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>About</string>
+			<key>FooterText</key>
+			<string>© 2019 Nerds Next Door – All rights reserved</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
 			<key>Key</key>
-			<string>slider_preference</string>
+			<string>version_preference</string>
+			<key>Title</key>
+			<string>Version</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>MaximumValueImage</key>
-			<string></string>
+			<string>0.0 (X)</string>
 		</dict>
 	</array>
 </dict>

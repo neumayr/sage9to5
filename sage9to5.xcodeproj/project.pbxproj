@@ -15,12 +15,15 @@
 		99E19A61BE8CD873B691F937 /* Pods_sage9to5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31390EA162A25A906B2006EC /* Pods_sage9to5.framework */; };
 		A65113AC2CCDCF6387F4F119 /* Pods_sage9to5_sage9to5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D17743688E6BAF9E1AE85B1 /* Pods_sage9to5_sage9to5Tests.framework */; };
 		AF0A0737226910CE0080316E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0736226910CE0080316E /* AppDelegate.swift */; };
-		AF0A0739226910CE0080316E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0738226910CE0080316E /* ViewController.swift */; };
 		AF0A073C226910CE0080316E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073A226910CE0080316E /* Main.storyboard */; };
 		AF0A073E226910CE0080316E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073D226910CE0080316E /* Assets.xcassets */; };
 		AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0A073F226910CE0080316E /* LaunchScreen.storyboard */; };
+		AF1CFF04226DD3B8009930D4 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1CFF03226DD3B8009930D4 /* MainTableViewController.swift */; };
 		AF277B4F2269E6190019804C /* Sage9to5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF277B4E2269E6190019804C /* Sage9to5Tests.swift */; };
 		AF277B572269E9C10019804C /* sage9to5Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF277B562269E9C10019804C /* sage9to5Spec.swift */; };
+		AF442451226CF4BE0001A392 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF442450226CF4BE0001A392 /* About.storyboard */; };
+		AF8D6F5822736D7F0044D2E7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8D6F5722736D7E0044D2E7 /* WebKit.framework */; };
+		AF8D6F5E2276EF280044D2E7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D6F5D2276EF280044D2E7 /* OnboardingViewController.swift */; };
 		AFD2C87C226919F600DD2E3B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFD2C87B226919F600DD2E3B /* Settings.bundle */; };
 		C2DC0C1064B9F283BB825982 /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CA00F1B3D8F858D0C1F397F /* Pods-sage9to5-sage9to5Tests-settings-metadata.plist */; };
 		E24FC11972D9CBEEF7407121 /* Pods-sage9to5-sage9to5Tests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98BEFC78E4201D774A1604E9 /* Pods-sage9to5-sage9to5Tests-metadata.plist */; };
@@ -48,18 +51,20 @@
 		98BEFC78E4201D774A1604E9 /* Pods-sage9to5-sage9to5Tests-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sage9to5-sage9to5Tests-metadata.plist"; sourceTree = "<group>"; };
 		AF0A0733226910CE0080316E /* sage9to5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sage9to5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0A0736226910CE0080316E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF0A0738226910CE0080316E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF0A073B226910CE0080316E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF0A073D226910CE0080316E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0A0740226910CE0080316E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0A0742226910CE0080316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1CFF03226DD3B8009930D4 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		AF277B4C2269E6190019804C /* sage9to5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sage9to5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF277B4E2269E6190019804C /* Sage9to5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sage9to5Tests.swift; sourceTree = "<group>"; };
 		AF277B502269E6190019804C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF277B562269E9C10019804C /* sage9to5Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sage9to5Spec.swift; sourceTree = "<group>"; };
+		AF442450226CF4BE0001A392 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		AF8D6F5722736D7E0044D2E7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AF8D6F5D2276EF280044D2E7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		AFD2C877226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		AFD2C878226914E900DD2E3B /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		AFD2C87B226919F600DD2E3B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = sage9to5/Settings.bundle; sourceTree = "<group>"; };
+		AFD2C87B226919F600DD2E3B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BD2136CAE136199737C7005C /* Pods-sage9to5-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-sage9to5-settings-metadata.plist"; path = "../sage9to5/Settings.bundle/Pods-sage9to5-settings-metadata.plist"; sourceTree = "<group>"; };
 		D1C65DE02A2C666628E5CE7D /* Pods-sage9to5-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sage9to5-metadata.plist"; sourceTree = "<group>"; };
 		E870761D1D5742D9A9762181 /* Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist"; path = "../sage9to5/Settings.bundle/Pods-sage9to5-Tests-sage9to5Tests-settings-metadata.plist"; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8D6F5822736D7F0044D2E7 /* WebKit.framework in Frameworks */,
 				99E19A61BE8CD873B691F937 /* Pods_sage9to5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +98,7 @@
 		277019A691FA0E0C3DD3E77F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF8D6F5722736D7E0044D2E7 /* WebKit.framework */,
 				31390EA162A25A906B2006EC /* Pods_sage9to5.framework */,
 				3ABC5B4B9E96C070761494F2 /* Pods_sage9to5_Tests_sage9to5Tests.framework */,
 				3D17743688E6BAF9E1AE85B1 /* Pods_sage9to5_sage9to5Tests.framework */,
@@ -102,7 +109,6 @@
 		AF0A072A226910CE0080316E = {
 			isa = PBXGroup;
 			children = (
-				AFD2C87B226919F600DD2E3B /* Settings.bundle */,
 				AF0A0735226910CE0080316E /* sage9to5 */,
 				AF277B4D2269E6190019804C /* sage9to5Tests */,
 				AF0A0734226910CE0080316E /* Products */,
@@ -125,12 +131,15 @@
 		AF0A0735226910CE0080316E /* sage9to5 */ = {
 			isa = PBXGroup;
 			children = (
+				AF442450226CF4BE0001A392 /* About.storyboard */,
 				AF0A0736226910CE0080316E /* AppDelegate.swift */,
-				AF0A0738226910CE0080316E /* ViewController.swift */,
-				AF0A073A226910CE0080316E /* Main.storyboard */,
 				AF0A073D226910CE0080316E /* Assets.xcassets */,
-				AF0A073F226910CE0080316E /* LaunchScreen.storyboard */,
 				AF0A0742226910CE0080316E /* Info.plist */,
+				AF0A073F226910CE0080316E /* LaunchScreen.storyboard */,
+				AF0A073A226910CE0080316E /* Main.storyboard */,
+				AF1CFF03226DD3B8009930D4 /* MainTableViewController.swift */,
+				AF8D6F5D2276EF280044D2E7 /* OnboardingViewController.swift */,
+				AFD2C87B226919F600DD2E3B /* Settings.bundle */,
 			);
 			path = sage9to5;
 			sourceTree = "<group>";
@@ -175,7 +184,6 @@
 				AF0A072F226910CE0080316E /* Sources */,
 				AF0A0730226910CE0080316E /* Frameworks */,
 				AF0A0731226910CE0080316E /* Resources */,
-				641EF5D9232461775FB32C5D /* [CP] Embed Pods Frameworks */,
 				AFD2C880226932A800DD2E3B /* Run Script - SwiftLint */,
 				AF9EEC0A2269CDC200371BAF /* Run Script - App Version to Settings.bundle */,
 			);
@@ -220,6 +228,11 @@
 				TargetAttributes = {
 					AF0A0732226910CE0080316E = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 					AF277B4B2269E6190019804C = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -253,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD2C87C226919F600DD2E3B /* Settings.bundle in Resources */,
+				AF442451226CF4BE0001A392 /* About.storyboard in Resources */,
 				AF0A0741226910CE0080316E /* LaunchScreen.storyboard in Resources */,
 				AF0A073E226910CE0080316E /* Assets.xcassets in Resources */,
 				AF0A073C226910CE0080316E /* Main.storyboard in Resources */,
@@ -319,30 +333,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		641EF5D9232461775FB32C5D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-sage9to5/Pods-sage9to5-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Erik/Erik.framework",
-				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Erik.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sage9to5/Pods-sage9to5-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF9EEC0A2269CDC200371BAF /* Run Script - App Version to Settings.bundle */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "version=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$PROJECT_DIR/$INFOPLIST_FILE\")\nbuild=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PROJECT_DIR/$INFOPLIST_FILE\")\n/usr/libexec/PlistBuddy -c \"Set PreferenceSpecifiers:5:DefaultValue $version ($build)\" \"$CODESIGNING_FOLDER_PATH/Settings.bundle/Root.plist\"\n";
+			shellScript = "version=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$PROJECT_DIR/$INFOPLIST_FILE\")\nbuild=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PROJECT_DIR/$INFOPLIST_FILE\")\n/usr/libexec/PlistBuddy -c \"Set PreferenceSpecifiers:8:DefaultValue $version ($build)\" \"$CODESIGNING_FOLDER_PATH/Settings.bundle/Root.plist\"\n";
 		};
 		AFD2C880226932A800DD2E3B /* Run Script - SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -388,8 +378,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-sage9to5-sage9to5Tests/Pods-sage9to5-sage9to5Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Erik/Erik.framework",
-				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -397,8 +385,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Erik.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -414,7 +400,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0A0739226910CE0080316E /* ViewController.swift in Sources */,
+				AF1CFF04226DD3B8009930D4 /* MainTableViewController.swift in Sources */,
+				AF8D6F5E2276EF280044D2E7 /* OnboardingViewController.swift in Sources */,
 				AF0A0737226910CE0080316E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +439,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				AF0A0740226910CE0080316E /* Base */,
-				AFD2C878226914E900DD2E3B /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

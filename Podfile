@@ -6,7 +6,6 @@ target 'sage9to5' do
   use_frameworks!
 
   # Pods for sage9to5
-  pod 'Erik'
   pod 'SwiftLint'
 
   target "sage9to5Tests" do

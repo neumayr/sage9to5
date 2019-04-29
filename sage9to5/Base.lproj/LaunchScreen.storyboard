@@ -1,47 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_0" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P1O-dE-9rR">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <!--About-->
+        <scene sceneID="N8U-mC-B1J">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="P1O-dE-9rR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JF5-HV-33N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9to5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dax-xZ-JL3">
-                                <rect key="frame" x="129" y="266" width="62" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Nerd Next Door Production" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Src-1h-P5R">
+                                <rect key="frame" x="20" y="744.66666666666663" width="335" height="13.333333333333371"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Irt-gk-dIg">
+                                <rect key="frame" x="89.333333333333329" y="247" width="196.33333333333337" height="226"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋 Hey!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEr-i6-onF">
+                                        <rect key="frame" x="44.000000000000007" y="0.0" width="108.66666666666669" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppShape-192" translatesAutoresizingMaskIntoConstraints="NO" id="glF-7G-ADT">
+                                        <rect key="frame" x="50.333333333333329" y="65" width="95.999999999999986" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="2Jr-ZX-xHm"/>
+                                            <constraint firstAttribute="width" constant="96" id="Q6a-iv-SnI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👨‍💻 💙 💪 💦 🚀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXG-lw-rhn">
+                                        <rect key="frame" x="0.0" y="190" width="196.33333333333334" height="36"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" red="0.27461984750000001" green="0.29405483599999999" blue="0.32549250130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="brandColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dax-xZ-JL3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gDf-6F-8U3"/>
-                            <constraint firstItem="dax-xZ-JL3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mg7-6s-dI7"/>
+                            <constraint firstItem="WE9-QZ-BQ7" firstAttribute="bottom" secondItem="Src-1h-P5R" secondAttribute="bottom" constant="20" id="3Sx-8p-rTN"/>
+                            <constraint firstItem="Irt-gk-dIg" firstAttribute="centerX" secondItem="JF5-HV-33N" secondAttribute="centerX" id="7xa-YH-4zq"/>
+                            <constraint firstItem="Irt-gk-dIg" firstAttribute="centerY" secondItem="JF5-HV-33N" secondAttribute="centerY" constant="-46" id="KmJ-nA-hdP"/>
+                            <constraint firstItem="Src-1h-P5R" firstAttribute="leading" secondItem="WE9-QZ-BQ7" secondAttribute="leading" constant="20" id="WHE-nd-Inw"/>
+                            <constraint firstItem="WE9-QZ-BQ7" firstAttribute="trailing" secondItem="Src-1h-P5R" secondAttribute="trailing" constant="20" id="d1u-Wj-Suq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="WE9-QZ-BQ7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="About" largeTitleDisplayMode="never" id="eHB-LY-oUt"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJ2-7z-MI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="713" y="347"/>
         </scene>
     </scenes>
     <resources>
-        <namedColor name="brandColor">
-            <color red="0.17647058823529413" green="0.74509803921568629" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="AppShape-192" width="192" height="192"/>
     </resources>
 </document>

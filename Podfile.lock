@@ -1,35 +1,24 @@
 PODS:
-  - Erik (4.2.0):
-    - Erik/Core (= 4.2.0)
-    - Kanna
-  - Erik/Core (4.2.0):
-    - Kanna
-  - Kanna (5.0.0)
   - Nimble (8.0.1)
   - Quick (2.1.0)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
-  - Erik
   - Nimble
   - Quick
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Erik
-    - Kanna
     - Nimble
     - Quick
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Erik: 6d235ccca881877bec9a28b833dfbb86dca91165
-  Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: 40fe01739f145e7b892b4e76c612f7e0c347fde2
+PODFILE CHECKSUM: 925765a7a90d3a9b8aed40b0768b34910aaa8695
 
 COCOAPODS: 1.6.1

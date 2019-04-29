@@ -10,9 +10,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Sage HR Portal</string>
-			<key>FooterText</key>
-			<string>Add the full Sage HR URL</string>
+			<string>Credentials</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -20,27 +18,53 @@
 			<key>Title</key>
 			<string>URL</string>
 			<key>Key</key>
-			<string>url_preference</string>
+			<string>url</string>
+			<key>KeyboardType</key>
+			<string>URL</string>
 			<key>DefaultValue</key>
 			<string>https://portal106427097.bpo-sage.de/mportal/</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Username</string>
+			<key>Key</key>
+			<string>username</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Password</string>
+			<key>Key</key>
+			<string>password</string>
+			<key>IsSecure</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Intro</string>
+			<string>Developer</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Key</key>
-			<string>intro_preference</string>
+			<string>didFinishOnboarding</string>
 			<key>Title</key>
-			<string>Show Intro</string>
+			<string>Onboarding completed</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Key</key>
+			<string>showBrowser</string>
+			<key>Title</key>
+			<string>Show debug browser</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
@@ -56,7 +80,7 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 			<key>Key</key>
-			<string>version_preference</string>
+			<string>versionPreference</string>
 			<key>Title</key>
 			<string>Version</string>
 			<key>DefaultValue</key>

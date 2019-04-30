@@ -13,6 +13,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   @IBOutlet weak var status: UITableViewCell!
   @IBOutlet weak var lastBooking: UITableViewCell!
+  @IBOutlet weak var leaveTime: UITableViewCell!
   @IBOutlet weak var webView: WKWebView!
   @IBOutlet weak var buttonToggle: UIButton!
   @IBOutlet weak var activityToggle: UIActivityIndicatorView!
@@ -20,12 +21,11 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.browserKickoff()
+    self.manageBrowserView()
 
     // App Settings
     let libraryPath = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
     print("library path is \(libraryPath)")
-
-    print("showBrowser prefs: \(UserDefaults.standard.bool(forKey: "showBrowser"))")
   }
 
   // MARK: - Logic
@@ -38,7 +38,6 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       }
 
       if url.contains("/mportal/Content/Home.aspx") {
-        self.browserChangeLanguage()
         self.browserNavigateToTime()
       }
 
@@ -61,6 +60,34 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.activityToggle.stopAnimating()
     self.refreshControl!.endRefreshing()
     self.buttonToggle.isEnabled = true
+  }
+
+  func manageBrowserView() {
+    UserDefaults.standard.synchronize()
+    let prefShowBrowser = UserDefaults.standard.bool(forKey: "showBrowser")
+    print("showBrowser prefs: \(prefShowBrowser)")
+    if !prefShowBrowser {
+      webView.isHidden = true
+    }
+  }
+
+  func parseLastBooking(_ rawTime: String) {
+    let time = rawTime.split(separator: "-")
+    print(time[0])
+
+    if time[0] == "..." { return }
+
+    let enterFormatter = DateFormatter()
+    enterFormatter.locale = Locale(identifier: "de_DE")
+    enterFormatter.dateFormat = "HH:mm"
+
+    var enterDate = enterFormatter.date(from: String(time[0]))!
+    enterDate.addTimeInterval(8.5 * 3600.0)
+
+    let resultFormatter = DateFormatter()
+    resultFormatter.dateFormat = "HH:mm"
+    let leaveTime = resultFormatter.string(from: enterDate)
+    self.leaveTime.detailTextLabel!.text = leaveTime
   }
 
   // MARK: - Browser Actions
@@ -106,6 +133,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     webView.evaluateJavaScript(script, completionHandler: { (data, _) in
       let myData = data.flatMap({$0 as? String})
       self.lastBooking.detailTextLabel!.text = myData
+      self.parseLastBooking(myData ?? "...-...")
     })
   }
 
@@ -125,7 +153,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   }
 
   func browserLogout() {
-    let script = "NavigateToUrl('/mportal/Logout.aspx?userlogout=1');');"
+    let script = "NavigateToUrl('/mportal/Logout.aspx?userlogout=1');"
     webView.evaluateJavaScript(script, completionHandler: nil)
   }
 

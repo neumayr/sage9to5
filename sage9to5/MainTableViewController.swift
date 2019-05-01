@@ -33,6 +33,10 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     print("---> WKWebView didFinish URL: \(webView.url!.absoluteString)")
 
     if let url = webView.url?.absoluteString {
+      if url.contains("/mportal/Logout.aspx") {
+        self.browserNavigateToLogin()
+      }
+
       if url.contains("/mportal/Login.aspx") {
         self.browserLogin()
       }
@@ -115,6 +119,11 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     webView.evaluateJavaScript(script, completionHandler: nil)
   }
 
+  func browserNavigateToLogin() {
+    let script = "document.getElementById('ctl00_cphContent_lnkRelogin').click();"
+    webView.evaluateJavaScript(script, completionHandler: nil)
+  }
+
   func browserNavigateToTime() {
     let script = "NavigateToUrl('/mportal/Content/Zeit/ZW/Default.aspx');"
     webView.evaluateJavaScript(script, completionHandler: nil)
@@ -137,8 +146,8 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     })
   }
 
-  func browserChangeLanguage() {
-    let script = "__doPostBack('ctl00','LANG_DE');"
+  func browserChangeLanguageToGerman() {
+    let script = "if (document.getElementById('ctl00_lblMySettings').innerHTML == 'settings') { __doPostBack('ctl00','LANG_DE'); }"
     webView.evaluateJavaScript(script, completionHandler: nil)
   }
 

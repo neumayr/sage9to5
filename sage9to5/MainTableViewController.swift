@@ -16,7 +16,6 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   @IBOutlet weak var leaveTime: UITableViewCell!
   @IBOutlet weak var webView: WKWebView!
   @IBOutlet weak var buttonToggle: UIButton!
-  @IBOutlet weak var activityToggle: UIActivityIndicatorView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,14 +37,17 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       }
 
       if url.contains("/mportal/Login.aspx") {
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Login…")
         self.browserLogin()
       }
 
       if url.contains("/mportal/Content/Home.aspx") {
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Open Time…")
         self.browserNavigateToTime()
       }
 
       if url.contains("/mportal/Content/Zeit/ZW/Default.aspx") {
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Collect data…")
         self.browserCollectStatus()
         self.browserCollectLastBooking()
         self.enableButtons()
@@ -55,13 +57,10 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   // MARK: - View helper
   func disableButtons() {
-    activityToggle.hidesWhenStopped = true
-    self.activityToggle.startAnimating()
     self.buttonToggle.isEnabled = false
   }
 
   func enableButtons() {
-    self.activityToggle.stopAnimating()
     self.refreshControl!.endRefreshing()
     self.buttonToggle.isEnabled = true
   }
@@ -147,6 +146,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   }
 
   func browserChangeLanguageToGerman() {
+    // swiftlint:disable:next line_length
     let script = "if (document.getElementById('ctl00_lblMySettings').innerHTML == 'settings') { __doPostBack('ctl00','LANG_DE'); }"
     webView.evaluateJavaScript(script, completionHandler: nil)
   }

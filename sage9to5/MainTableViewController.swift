@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import UserNotifications
 
 class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
@@ -33,6 +34,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
     if let url = webView.url?.absoluteString {
       if url.contains("/mportal/Logout.aspx") {
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Go to Login…")
         self.browserNavigateToLogin()
       }
 
@@ -50,6 +52,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Collect data…")
         self.browserCollectStatus()
         self.browserCollectLastBooking()
+        self.browserChangeLanguageToGerman()
         self.enableButtons()
       }
     }
@@ -76,21 +79,61 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   func parseLastBooking(_ rawTime: String) {
     let time = rawTime.split(separator: "-")
-    print(time[0])
 
     if time[0] == "..." { return }
 
     let enterFormatter = DateFormatter()
-    enterFormatter.locale = Locale(identifier: "de_DE")
     enterFormatter.dateFormat = "HH:mm"
 
     var enterDate = enterFormatter.date(from: String(time[0]))!
+    let enterTime = enterFormatter.string(from: enterDate)
+    UserDefaults.standard.set(enterTime, forKey: "enterTime")
+    // calculate enterDate
     enterDate.addTimeInterval(8.5 * 3600.0)
 
     let resultFormatter = DateFormatter()
     resultFormatter.dateFormat = "HH:mm"
+
     let leaveTime = resultFormatter.string(from: enterDate)
     self.leaveTime.detailTextLabel!.text = leaveTime
+    UserDefaults.standard.set(leaveTime, forKey: "leaveTime")
+  }
+
+  func sendPushNotification(title: String, body: String, timeInterval: Double, identifier: String) {
+    let notificationContent = UNMutableNotificationContent()
+    notificationContent.title = title
+    notificationContent.body = body
+    notificationContent.sound = UNNotificationSound.default
+
+    let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+
+    let notificationRequest = UNNotificationRequest(
+      identifier: identifier,
+      content: notificationContent,
+      trigger: notificationTrigger
+    )
+    UNUserNotificationCenter.current().add(notificationRequest, withCompletionHandler: nil)
+  }
+
+  func sendPushForEnter() {
+    let enterTime = UserDefaults.standard.string(forKey: "enterTime")!
+    let leaveTime = UserDefaults.standard.string(forKey: "leaveTime")!
+    // enter workplace push
+    self.sendPushNotification(
+      title: "Enter Workplace",
+      body: "Successfully check in at \(enterTime) h \nForecast: Save leave time at \(leaveTime) h",
+      timeInterval: 5,
+      identifier: "EnterWorkInfoPush"
+    )
+
+    // go home reminder
+    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["ReminderWorkInfoPush"])
+    self.sendPushNotification(
+      title: "9to5 Reminder",
+      body: "Remember – Your leave time is at \(leaveTime) h\nGo home and enjoy!",
+      timeInterval: 8.25 * 3600.0,
+      identifier: "ReminderWorkInfoPush"
+    )
   }
 
   // MARK: - Browser Actions
@@ -142,6 +185,13 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       let myData = data.flatMap({$0 as? String})
       self.lastBooking.detailTextLabel!.text = myData
       self.parseLastBooking(myData ?? "...-...")
+
+      // send push after collection the latest data
+      let browserClickEnter = UserDefaults.standard.bool(forKey: "browserClickEnter")
+      if browserClickEnter {
+        UserDefaults.standard.set(false, forKey: "browserClickEnter")
+        self.sendPushForEnter()
+      }
     })
   }
 
@@ -177,8 +227,10 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     let statusText = self.status.detailTextLabel!.text!
     if statusText.contains("abwesend") || statusText.contains("absent") {
       self.browserClickEnter()
+      UserDefaults.standard.set(true, forKey: "browserClickEnter")
     } else {
       self.browserClickLeave()
+      UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
   }
 }

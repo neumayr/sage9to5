@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -26,8 +27,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
       }
 
+      // Manage Push Notifications when app is running
+      UNUserNotificationCenter.current().delegate = self
+
+      // Request Push Notification permissions from User
+      UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        if granted {
+          print("Notifications permission granted.")
+        } else {
+          print(error as Any)
+        }
+      }
+
       // Override point for customization after application launch.
       return true
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+      completionHandler([.alert, .sound])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

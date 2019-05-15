@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <wkWebView key="tableFooterView" contentMode="scaleToFill" id="w5G-0b-iRN">
-                            <rect key="frame" x="0.0" y="313.00000000000006" width="375" height="259.66666666666669"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="0.0" y="352.33333333333331" width="375" height="259.66666666666669"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO">
                                 <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
@@ -45,10 +45,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AwI-KF-aAJ">
-                                                    <rect key="frame" x="278" y="11.999999999999998" width="81" height="20.333333333333332"/>
+                                                    <rect key="frame" x="289.66666666666669" y="11.999999999999998" width="69.333333333333329" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="unbekannt">
+                                                        <fragment content="unknown">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="17"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -67,8 +67,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Last booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YnV-Yh-Pej">
-                                                    <rect key="frame" x="16.000000000000007" y="11.999999999999998" width="98.666666666666671" height="20.333333333333332"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Last Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YnV-Yh-Pej">
+                                                    <rect key="frame" x="15.999999999999993" y="11.999999999999998" width="99.333333333333329" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -92,10 +92,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="lfs-hX-YGy">
+                            <tableViewSection headerTitle="Forecast" footerTitle="Calculated time forecast to go home (8h + brake)." id="lfs-hX-YGy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="R1h-eH-aQF" detailTextLabel="zsN-ed-7zJ" style="IBUITableViewCellStyleValue1" id="o21-h0-EeK">
-                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="186.33333333333334" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o21-h0-EeK" id="jSQ-30-Eae">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -129,7 +129,7 @@
                             <tableViewSection footerTitle=" " id="FIB-ek-yBW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2ss-Hq-H8V">
-                                        <rect key="frame" x="0.0" y="239" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="278.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ss-Hq-H8V" id="k4l-Ty-mBa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -206,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="1152.8" y="701.23152709359613"/>
         </scene>
-        <!--Login Credentials-->
+        <!--Credentials-->
         <scene sceneID="wV5-NR-ss1">
             <objects>
                 <tableViewController id="FgK-bL-2UD" customClass="OnboardingViewController" customModule="sage9to5" customModuleProvider="target" sceneMemberID="viewController">
@@ -215,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Login credentials" footerTitle="Your credentials are saved on device." id="qw7-7K-p8M">
+                            <tableViewSection headerTitle="Credentials" footerTitle="Login credentials are saved on device." id="qw7-7K-p8M">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="44" id="TTJ-lU-oYR">
                                         <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
@@ -269,7 +269,7 @@
                             <outlet property="delegate" destination="FgK-bL-2UD" id="bHe-dS-dQY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login Credentials" prompt="https://portal106427097.bpo-sage.de/" id="cf3-jj-T7p">
+                    <navigationItem key="navigationItem" title="Credentials" prompt="https://portal106427097.bpo-sage.de/" id="cf3-jj-T7p">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="l2L-yD-tT1">
                             <connections>
                                 <action selector="onSave:" destination="FgK-bL-2UD" id="Lej-aa-xOo"/>

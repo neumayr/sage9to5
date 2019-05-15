@@ -74,6 +74,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     print("showBrowser prefs: \(prefShowBrowser)")
     if !prefShowBrowser {
       webView.isHidden = true
+      webView.frame.size.height = 0
     }
   }
 

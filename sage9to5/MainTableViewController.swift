@@ -86,20 +86,36 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     let enterFormatter = DateFormatter()
     enterFormatter.dateFormat = "HH:mm"
 
-    var enterDate = enterFormatter.date(from: String(time[0]))!
+    let enterDate = enterFormatter.date(from: String(time[0]))!
     let enterTime = enterFormatter.string(from: enterDate)
     UserDefaults.standard.set(enterTime, forKey: "enterTime")
-    // calculate enterDate
-    enterDate.addTimeInterval(8.5 * 3600.0)
 
-    let resultFormatter = DateFormatter()
-    resultFormatter.dateFormat = "HH:mm"
+    let forecastLeaveFormatter = DateFormatter()
+    forecastLeaveFormatter.dateFormat = "HH:mm"
 
-    let leaveTime = resultFormatter.string(from: enterDate)
-    self.leaveTime.detailTextLabel!.text = leaveTime
-    UserDefaults.standard.set(leaveTime, forKey: "leaveTime")
+    let forcastDate = enterDate.addingTimeInterval(8.5 * 3600.0)
+    let forecastLeaveTime = forecastLeaveFormatter.string(from: forcastDate)
+    self.leaveTime.detailTextLabel!.text = forecastLeaveTime
+    UserDefaults.standard.set(forecastLeaveTime, forKey: "forecastLeaveTime")
+
+    if time[1] != "..." {
+      let leaveFormatter = DateFormatter()
+      leaveFormatter.dateFormat = "HH:mm"
+
+      let leaveDate = leaveFormatter.date(from: String(time[1]))!
+      let leaveTime = leaveFormatter.string(from: leaveDate)
+      UserDefaults.standard.set(leaveTime, forKey: "leaveTime")
+
+      let dateIntervalFormatter = DateComponentsFormatter()
+      dateIntervalFormatter.allowedUnits = [.day, .hour, .minute]
+      dateIntervalFormatter.unitsStyle = .abbreviated
+
+      let timeInMinutes = dateIntervalFormatter.string(from: enterDate, to: leaveDate)!
+      UserDefaults.standard.set(timeInMinutes, forKey: "timeInMinutes")
+    }
   }
 
+  // MARK: - Send push
   func sendPushNotification(title: String, body: String, timeInterval: Double, identifier: String) {
     let notificationContent = UNMutableNotificationContent()
     notificationContent.title = title
@@ -118,11 +134,11 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   func sendPushForEnter() {
     let enterTime = UserDefaults.standard.string(forKey: "enterTime")!
-    let leaveTime = UserDefaults.standard.string(forKey: "leaveTime")!
+    let forecastLeaveTime = UserDefaults.standard.string(forKey: "forecastLeaveTime")!
     // enter workplace push
     self.sendPushNotification(
       title: "Enter Workplace",
-      body: "Successfully check in at \(enterTime) h \nForecast: Save leave time at \(leaveTime) h",
+      body: "Successfully check in at \(enterTime) h \nForecast: Save leave time at \(forecastLeaveTime) h",
       timeInterval: 5,
       identifier: "EnterWorkInfoPush"
     )
@@ -131,9 +147,23 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["ReminderWorkInfoPush"])
     self.sendPushNotification(
       title: "9to5 Reminder",
-      body: "Remember – Your leave time is at \(leaveTime) h\nGo home and enjoy!",
+      body: "Remember – Your leave time is at \(forecastLeaveTime) h\nGo home and enjoy!",
       timeInterval: 8.25 * 3600.0,
       identifier: "ReminderWorkInfoPush"
+    )
+  }
+
+  func sendPushForLeave() {
+    let enterTime = UserDefaults.standard.string(forKey: "enterTime")!
+    let leaveTime = UserDefaults.standard.string(forKey: "leaveTime")!
+    let timeInMinutes = UserDefaults.standard.string(forKey: "timeInMinutes")!
+
+    // leave workplace push
+    self.sendPushNotification(
+      title: "Leave Workplace",
+      body: "Successfully check out at \(leaveTime) h \nInfo: \(enterTime) → \(leaveTime) = \(timeInMinutes)",
+      timeInterval: 5,
+      identifier: "LeaveWorkInfoPush"
     )
   }
 
@@ -188,10 +218,19 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       self.parseLastBooking(myData ?? "...-...")
 
       // send push after collection the latest data
+      // browserClickEnter
       let browserClickEnter = UserDefaults.standard.bool(forKey: "browserClickEnter")
       if browserClickEnter {
         UserDefaults.standard.set(false, forKey: "browserClickEnter")
         self.sendPushForEnter()
+      }
+
+      // browserClickLeave
+      let browserClickLeave = UserDefaults.standard.bool(forKey: "browserClickLeave")
+      if browserClickLeave {
+        UserDefaults.standard.set(false, forKey: "browserClickLeave")
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        self.sendPushForLeave()
       }
     })
   }
@@ -231,7 +270,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       UserDefaults.standard.set(true, forKey: "browserClickEnter")
     } else {
       self.browserClickLeave()
-      UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+      UserDefaults.standard.set(true, forKey: "browserClickLeave")
     }
   }
 }

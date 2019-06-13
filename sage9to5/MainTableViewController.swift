@@ -61,10 +61,12 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   // MARK: - View helper
   func disableButtons() {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
     self.buttonToggle.isEnabled = false
   }
 
   func enableButtons() {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = false
     self.refreshControl!.endRefreshing()
     self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to Refresh…")
     self.buttonToggle.isEnabled = true
@@ -306,6 +308,5 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   @IBAction func settingsButton(_ sender: UIBarButtonItem) {
     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
-
   }
 }

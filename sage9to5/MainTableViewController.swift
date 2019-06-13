@@ -170,8 +170,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.sendPushNotification(
       title: "9to5 Reminder",
       body: "Prepare – At \(forecastLeaveTime) it is time to go home!\nEnjoy your life!",
-//      timeInterval: 8.25 * 3600.0,
-      timeInterval: 10,
+      timeInterval: 8.25 * 3600.0,
       identifier: "ReminderWorkInfoPush"
     )
 
@@ -180,8 +179,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.sendPushNotification(
       title: "9to7 Reminder",
       body: "Remember – It's \(forecastMaxLeaveTime) Enough for today!\nYou reached the maximum working hours.",
-//      timeInterval: 10.75 * 3600.0,
-      timeInterval: 30,
+      timeInterval: 10.75 * 3600.0,
       identifier: "ReminderMaxWorkInfoPush"
     )
   }

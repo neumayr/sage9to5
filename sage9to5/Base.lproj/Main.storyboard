@@ -158,26 +158,32 @@
                             </tableViewSection>
                             <tableViewSection footerTitle=" " id="FIB-ek-yBW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2ss-Hq-H8V">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="2ss-Hq-H8V">
                                         <rect key="frame" x="0.0" y="322.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ss-Hq-H8V" id="k4l-Ty-mBa">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ss-Hq-H8V" id="k4l-Ty-mBa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMX-sB-Y7v">
-                                                    <rect key="frame" x="16" y="6" width="343" height="30"/>
-                                                    <gestureRecognizers/>
-                                                    <state key="normal" title="Toggle presence"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sdz-D8-3gD">
+                                                    <rect key="frame" x="308" y="6" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="toggleButton:" destination="v94-8J-VWY" eventType="touchUpInside" id="hlH-xn-rY3"/>
+                                                        <action selector="toggleButton:" destination="v94-8J-VWY" eventType="valueChanged" id="O0G-pu-TJA"/>
                                                     </connections>
-                                                </button>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8n-Ii-d7P">
+                                                    <rect key="frame" x="16" y="11" width="50" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="KMX-sB-Y7v" secondAttribute="trailing" constant="16" id="eCj-WC-3CV"/>
-                                                <constraint firstItem="KMX-sB-Y7v" firstAttribute="top" secondItem="k4l-Ty-mBa" secondAttribute="top" constant="6" id="vf4-aL-7D1"/>
-                                                <constraint firstItem="KMX-sB-Y7v" firstAttribute="leading" secondItem="k4l-Ty-mBa" secondAttribute="leading" constant="16" id="yxc-Jp-fko"/>
+                                                <constraint firstAttribute="trailing" secondItem="Sdz-D8-3gD" secondAttribute="trailing" constant="18" id="8Ef-lA-x5C"/>
+                                                <constraint firstItem="c8n-Ii-d7P" firstAttribute="top" secondItem="k4l-Ty-mBa" secondAttribute="topMargin" id="B1l-Ln-TWb"/>
+                                                <constraint firstItem="c8n-Ii-d7P" firstAttribute="leading" secondItem="k4l-Ty-mBa" secondAttribute="leadingMargin" id="VAg-vW-CnF"/>
+                                                <constraint firstItem="Sdz-D8-3gD" firstAttribute="top" secondItem="k4l-Ty-mBa" secondAttribute="top" constant="6" id="VxE-os-Ebb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="c8n-Ii-d7P" secondAttribute="bottom" constant="1" id="d51-dv-2CR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -213,7 +219,7 @@
                         </connections>
                     </refreshControl>
                     <connections>
-                        <outlet property="buttonToggle" destination="KMX-sB-Y7v" id="pOx-qx-jDJ"/>
+                        <outlet property="buttonToggle" destination="Sdz-D8-3gD" id="TWd-Pd-VZp"/>
                         <outlet property="lastBooking" destination="jKZ-9A-gYe" id="8RW-me-mVJ"/>
                         <outlet property="leaveTime" destination="o21-h0-EeK" id="9ej-1G-XiH"/>
                         <outlet property="maxLeaveTime" destination="FIS-xL-CO6" id="vOE-uk-FWD"/>

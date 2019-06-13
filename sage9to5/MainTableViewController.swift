@@ -17,7 +17,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   @IBOutlet weak var leaveTime: UITableViewCell!
   @IBOutlet weak var maxLeaveTime: UITableViewCell!
   @IBOutlet weak var webView: WKWebView!
-  @IBOutlet weak var buttonToggle: UIButton!
+  @IBOutlet weak var buttonToggle: UISwitch!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -68,6 +68,15 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.refreshControl!.endRefreshing()
     self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to Refresh…")
     self.buttonToggle.isEnabled = true
+  }
+
+  func prepareToggle() {
+    let statusText = self.status.detailTextLabel!.text!
+    if statusText.contains("abwesend") || statusText.contains("absent") {
+      self.buttonToggle.isOn = false
+    } else {
+      self.buttonToggle.isOn = true
+    }
   }
 
   func manageBrowserView() {
@@ -229,6 +238,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     webView.evaluateJavaScript(script, completionHandler: { (data, _) in
       let myData = data.flatMap({$0 as? String})
       self.status.detailTextLabel!.text = myData
+      self.prepareToggle()
     })
   }
 
@@ -284,10 +294,8 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.browserNavigateToTime()
   }
 
-  @IBAction func toggleButton(_ sender: UIButton) {
-    self.disableButtons()
-    let statusText = self.status.detailTextLabel!.text!
-    if statusText.contains("abwesend") || statusText.contains("absent") {
+  @IBAction func toggleButton(_ sender: UISwitch) {
+    if sender.isOn {
       self.browserClickEnter()
       UserDefaults.standard.set(true, forKey: "browserClickEnter")
     } else {

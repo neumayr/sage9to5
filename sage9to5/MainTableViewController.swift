@@ -295,4 +295,9 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       UserDefaults.standard.set(true, forKey: "browserClickLeave")
     }
   }
+
+  @IBAction func settingsButton(_ sender: UIBarButtonItem) {
+    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+
+  }
 }

@@ -189,7 +189,13 @@
                             <outlet property="delegate" destination="v94-8J-VWY" id="ViG-dl-EOr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="9to5" id="KGi-sH-lnk"/>
+                    <navigationItem key="navigationItem" title="9to5" id="KGi-sH-lnk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="fQJ-mR-dlA">
+                            <connections>
+                                <action selector="settingsButton:" destination="v94-8J-VWY" id="tXv-wc-K5f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="lA1-T9-4Kn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

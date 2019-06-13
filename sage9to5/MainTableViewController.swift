@@ -15,6 +15,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   @IBOutlet weak var status: UITableViewCell!
   @IBOutlet weak var lastBooking: UITableViewCell!
   @IBOutlet weak var leaveTime: UITableViewCell!
+  @IBOutlet weak var maxLeaveTime: UITableViewCell!
   @IBOutlet weak var webView: WKWebView!
   @IBOutlet weak var buttonToggle: UIButton!
 
@@ -65,6 +66,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
 
   func enableButtons() {
     self.refreshControl!.endRefreshing()
+    self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to Refresh…")
     self.buttonToggle.isEnabled = true
   }
 
@@ -93,10 +95,17 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     let forecastLeaveFormatter = DateFormatter()
     forecastLeaveFormatter.dateFormat = "HH:mm"
 
+    // 8h + 30min brake
     let forcastDate = enterDate.addingTimeInterval(8.5 * 3600.0)
     let forecastLeaveTime = forecastLeaveFormatter.string(from: forcastDate)
     self.leaveTime.detailTextLabel!.text = forecastLeaveTime
     UserDefaults.standard.set(forecastLeaveTime, forKey: "forecastLeaveTime")
+
+    // 10h + 45min brake
+    let forcastMaxDate = enterDate.addingTimeInterval(10.75 * 3600.0)
+    let forecastMaxLeaveTime = forecastLeaveFormatter.string(from: forcastMaxDate)
+    self.maxLeaveTime.detailTextLabel!.text = forecastMaxLeaveTime
+    UserDefaults.standard.set(forecastMaxLeaveTime, forKey: "forecastMaxLeaveTime")
 
     if time[1] != "..." {
       let leaveFormatter = DateFormatter()
@@ -135,21 +144,34 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   func sendPushForEnter() {
     let enterTime = UserDefaults.standard.string(forKey: "enterTime")!
     let forecastLeaveTime = UserDefaults.standard.string(forKey: "forecastLeaveTime")!
+    let forecastMaxLeaveTime = UserDefaults.standard.string(forKey: "forecastMaxLeaveTime")!
+
     // enter workplace push
     self.sendPushNotification(
       title: "Enter Workplace",
-      body: "Successfully check in at \(enterTime) h \nForecast: Save leave time at \(forecastLeaveTime) h",
-      timeInterval: 5,
+      body: "Successfully check in at \(enterTime)\nForecast: Healty at \(forecastLeaveTime) – Max: \(forecastMaxLeaveTime)",
+      timeInterval: 0.5,
       identifier: "EnterWorkInfoPush"
     )
 
-    // go home reminder
+    // 8 hours (+brake) - go home reminder
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["ReminderWorkInfoPush"])
     self.sendPushNotification(
       title: "9to5 Reminder",
-      body: "Remember – Your leave time is at \(forecastLeaveTime) h\nGo home and enjoy!",
-      timeInterval: 8.25 * 3600.0,
+      body: "Prepare – At \(forecastLeaveTime) it is time to go home!\nEnjoy your life!",
+//      timeInterval: 8.25 * 3600.0,
+      timeInterval: 10,
       identifier: "ReminderWorkInfoPush"
+    )
+
+    // 10 hours (+brake) - max working hours reminder
+    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["ReminderMaxWorkInfoPush"])
+    self.sendPushNotification(
+      title: "9to7 Reminder",
+      body: "Remember – It's \(forecastMaxLeaveTime) Enough for today!\nYou reached the maximum working hours.",
+//      timeInterval: 10.75 * 3600.0,
+      timeInterval: 30,
+      identifier: "ReminderMaxWorkInfoPush"
     )
   }
 
@@ -161,8 +183,8 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     // leave workplace push
     self.sendPushNotification(
       title: "Leave Workplace",
-      body: "Successfully check out at \(leaveTime) h \nInfo: \(enterTime) → \(leaveTime) = \(timeInMinutes)",
-      timeInterval: 5,
+      body: "Successfully check out at \(leaveTime) \nInfo: \(enterTime) → \(leaveTime) = \(timeInMinutes)",
+      timeInterval: 0.5,
       identifier: "LeaveWorkInfoPush"
     )
   }

@@ -34,6 +34,10 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     print("---> WKWebView didFinish URL: \(webView.url!.absoluteString)")
 
     if let url = webView.url?.absoluteString {
+      if url.contains("/HRPortal/de-DE/Time/TimeTracking") {
+        self.browserIsSessionExpired()
+      }
+
       if url.contains("/mportal/Logout.aspx") {
         self.refreshControl!.attributedTitle = NSAttributedString(string: "Go to Login…")
         self.browserNavigateToLogin()
@@ -270,6 +274,12 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   func browserChangeLanguageToGerman() {
     // swiftlint:disable:next line_length
     let script = "if (document.getElementById('ctl00_lblMySettings').innerHTML == 'settings') { __doPostBack('ctl00','LANG_DE'); }"
+    webView.evaluateJavaScript(script, completionHandler: nil)
+  }
+
+  func browserIsSessionExpired() {
+    // swiftlint:disable:next line_length
+    let script = "if (document.querySelector('.sagehr-overlay-content')) { document.querySelector('.sagehr-overlay-commands > button.sagehr-button-imagetext').click() }"
     webView.evaluateJavaScript(script, completionHandler: nil)
   }
 

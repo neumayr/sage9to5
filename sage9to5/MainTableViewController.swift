@@ -169,21 +169,21 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
       identifier: "EnterWorkInfoPush"
     )
 
-    // 8 hours (+brake) - go home reminder
+    // 8 hours (30m brake) - go home reminder
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["ReminderWorkInfoPush"])
     self.sendPushNotification(
-      title: "9to5 Reminder",
+      title: "8h Reminder",
       body: "Prepare – At \(forecastLeaveTime) it is time to go home!\nEnjoy your life!",
       timeInterval: 8.25 * 3600.0,
       identifier: "ReminderWorkInfoPush"
     )
 
-    // 10 hours (+brake) - max working hours reminder
+    // 10 hours (45m brake) - max working hours reminder
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["ReminderMaxWorkInfoPush"])
     self.sendPushNotification(
-      title: "9to7 Reminder",
-      body: "Remember – It's \(forecastMaxLeaveTime) Enough for today!\nYou reached the maximum working hours.",
-      timeInterval: 10.75 * 3600.0,
+      title: "10h Reminder",
+      body: "Enough for today! – \(forecastMaxLeaveTime) is the limit!\nSoon you reach the maximum working hours.",
+      timeInterval: 10.30 * 3600.0,
       identifier: "ReminderMaxWorkInfoPush"
     )
   }

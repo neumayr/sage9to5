@@ -165,7 +165,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.sendPushNotification(
       title: "Enter Workplace",
       body: "Successfully check in at \(enterTime)\nForecast: Healty at \(forecastLeaveTime) – Max: \(forecastMaxLeaveTime)",
-      timeInterval: 0.5,
+      timeInterval: 0.25,
       identifier: "EnterWorkInfoPush"
     )
 
@@ -183,7 +183,7 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
     self.sendPushNotification(
       title: "10h Reminder",
       body: "Enough for today! – \(forecastMaxLeaveTime) is the limit!\nSoon you reach the maximum working hours.",
-      timeInterval: 10.30 * 3600.0,
+      timeInterval: 10.50 * 3600.0,
       identifier: "ReminderMaxWorkInfoPush"
     )
   }

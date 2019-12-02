@@ -100,5 +100,6 @@ iOSInjectionProject/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+*.p12
 
 # End of https://www.gitignore.io/api/swift,xcode,cocoapods

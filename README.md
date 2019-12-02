@@ -19,9 +19,14 @@
   * Reset Onboarding
   * Preview WebView toggle (debug)
 
-## Setup / Get started
+## Setup
 
-Search for the Sage entry URL (`https://portal000000000.bpo-sage.de`) and customize it with your identifier.
+Search for the Sage entry URL (`https://portal000000000.bpo-sage.de`) and customize it.
+
+## Motivation
+
+Unfortunately Sage does not provide an API for their service.
+So this project uses on-device automation of `WebKit` to fulfill all required tasks.
 
 ## Screenshots
 

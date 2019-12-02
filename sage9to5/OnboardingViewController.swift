@@ -15,6 +15,8 @@ class OnboardingViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    navigationItem.prompt = UserDefaults.standard.string(forKey: "url")
   }
 
   @IBAction func onSave(_ sender: UIBarButtonItem) {

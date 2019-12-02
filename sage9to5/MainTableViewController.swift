@@ -209,7 +209,9 @@ class MainTableViewController: UITableViewController, WKNavigationDelegate {
   }
 
   func browserInit() {
-    let url = URL(string: "https://portal106427097.bpo-sage.de/mportal/Login.aspx")!
+    let baseUrl = UserDefaults.standard.string(forKey: "url")!
+
+    let url = URL(string: "\(baseUrl)Login.aspx")!
     let request = URLRequest(url: url)
     webView.navigationDelegate = self
     webView.load(request)

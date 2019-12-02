@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       // Onboarding
       if !UserDefaults.standard.bool(forKey: "didFinishOnboarding") {
         UserDefaults.standard.set(true, forKey: "didFinishOnboarding")
-        UserDefaults.standard.set(true, forKey: "showBrowser")
+        UserDefaults.standard.set(false, forKey: "showBrowser")
+        UserDefaults.standard.set("https://portal000000000.bpo-sage.de/mportal/", forKey: "url")
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "OnboardingStoryboard")

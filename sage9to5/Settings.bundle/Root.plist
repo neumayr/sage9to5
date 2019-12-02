@@ -22,7 +22,7 @@
 			<key>KeyboardType</key>
 			<string>URL</string>
 			<key>DefaultValue</key>
-			<string>https://portal106427097.bpo-sage.de/mportal/</string>
+			<string>https://portal000000000.bpo-sage.de/mportal/</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -66,7 +66,7 @@
 			<key>Title</key>
 			<string>Show debug browser</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>

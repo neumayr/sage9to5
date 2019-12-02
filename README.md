@@ -19,6 +19,9 @@
   * Reset Onboarding
   * Preview WebView toggle (debug)
 
+## Setup / Get started
+
+Search for the Sage entry URL (`https://portal000000000.bpo-sage.de`) and customize it with your identifier.
 
 ## Screenshots
 
